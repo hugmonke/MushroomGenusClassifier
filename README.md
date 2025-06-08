@@ -11,6 +11,10 @@ Web application has been developed using Flask framework.
 - **Tech Stack**: FastAI, PyTorch, Flask (for web deployment)
 - **Extras**: Wikipedia API integration for species descriptions
 
+## Web startup
+The web application runs locally. To start it, execute app.py, then open your browser and navigate to http://localhost:5000.
+Make sure the HTML file is placed in the templates directory within the project folder.
+
 ## Installation
 ```bash
 # Clone the repository

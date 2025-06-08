@@ -4,7 +4,7 @@ A deep learning model trained to classify mushroom genera using FastAI and ResNe
 
 Link to the dataset -> https://www.kaggle.com/code/yelloworld/mushrooms-classification.
 
-Web application has been developed using Flask framework.
+Web application has been developed using the Flask framework.
 
 ![Example Web App Prediction](example.png)  
 

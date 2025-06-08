@@ -1,7 +1,9 @@
 # Web application for Mushroom Genus Classification.
 
 A deep learning model trained to classify mushroom genera using FastAI and ResNet50, based on Kaggle's mushroom dataset.
+
 Link to the dataset -> https://www.kaggle.com/code/yelloworld/mushrooms-classification.
+
 Web application has been developed using Flask framework.
 
 ![Example Web App Prediction](example.png)  

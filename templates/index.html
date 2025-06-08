@@ -140,6 +140,30 @@
             background-color: #e8f5e9;
             color: #2e7d32;
         }
+        .description {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .description h3 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .description p {
+            font-style: italic;
+            color: #555;
+        }
+
+        .description small a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .description small a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -174,17 +198,26 @@
         </form>
 
         {% if prediction %}
-            <div class="result">
-                <h2>Results</h2>
-                <p><strong>Prediction:</strong> {{ prediction }}</p>
-                <p><strong>Confidence:</strong> {{ confidence|round(1) }}%</p>
-                <div class="confidence-meter">
-                    <div class="confidence-fill {% if confidence < 50 %}low-confidence{% endif %}" 
-                         style="width: {{ confidence|default(0) }}%"></div>
-                </div>  
+    <div class="result">
+        <h2>Results</h2>
+        <p><strong>Prediction:</strong> {{ prediction }}</p>
+        <p><strong>Confidence:</strong> {{ confidence|round(1) }}%</p>
+        <div class="confidence-meter">
+            <div class="confidence-fill {% if confidence < 50 %}low-confidence{% endif %}" 
+                 style="width: {{ confidence|default(0) }}%"></div>
+        </div>
+        {% if description %}
+            <div class="description">
+                <h3>About {{ prediction }}</h3>
+                <p>{{ description }}</p>
+                <small><a href="https://en.wikipedia.org/wiki/{{ prediction|replace(' ', '_') }}" 
+                       target="_blank">Read more on Wikipedia</a></small>
             </div>
-            <img src="{{ url_for('static', filename='uploaded_images/' + image_path.split('/')[-1]) }}" alt="Uploaded Mushroom" class="prediction-img">
         {% endif %}
+    </div>
+    <img src="{{ url_for('static', filename='uploaded_images/' + image_path.split('/')[-1]) }}" 
+         alt="Uploaded Mushroom" class="prediction-img">
+{% endif %}
     </div>
 
     <script>

@@ -2,7 +2,7 @@
 
 A deep learning model trained to classify mushroom genera using FastAI and ResNet50, based on Kaggle's mushroom dataset.
 
-Link to the dataset -> https://www.kaggle.com/code/yelloworld/mushrooms-classification.
+Link to the dataset -> https://www.kaggle.com/datasets/maysee/mushrooms-classification-common-genuss-images.
 
 Web application has been developed using the Flask framework.
 
